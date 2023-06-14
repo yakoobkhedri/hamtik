@@ -614,8 +614,755 @@
                 </li>
             </ul>
         </div>
-        <div class="col-10">
-           
+        <div class="col-10 p-0"  style="padding-top: 0!important;">
+            <div>
+                <div class="flex align-items-center py-3 border-bottom px-3">
+                    <span class="text-primary fw-bold">لیست پروژه ها</span>
+                </div>
+                <div class="invite py-3 px-4">
+                    <div class="d-flex align-items-center justify-content-around">
+                        <h5> دعوت همکاران </h5>
+                        <h6>1401/06/16</h6>
+                    </div>
+                    <div class="d-flex align-items-center gap-1 fs-6 mt-3">
+                        <span>وقت آن است که تمامی همکاران خود را به سیستم</span>
+                        <a class="cursor text-primary">دعوت نمایید </a>
+                    </div>
+                    <p class="fs-6 mt-4 ps-6">
+                        لطفا با هماهنگی مدیر عامل یا راهبر سیستم، افرادی که باید دعوت نمایید را از طریق ارسال دعوتنامه
+                        ایمیلی به سیستم دعوت نمایید. افرادی که از طریق دعوتنامه وارد سیستم می شوند، به عنوان کاربر عادی
+                        محسوب می‌شوند.
+                    </p>
+                </div>
+                <div class="py-4 px-3">
+                    <div>
+                        <div id="searchProjectBtn"
+                            class="d-flex align-items-center searchProjectBtn border-end-0 justify-content-between alert alert-success mb-0 cursor">
+                            <span>جستجو در پروژه‌ها</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                            </svg>
+                        </div>
+                        <div id="searchProject" class="row searchProject alert-success border-end-0 py-3">
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">دسته بندی</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="همه">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">سطح</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="همه">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">اولویت</label>
+                                <input type=" text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="همه">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">وضعیت</label>
+                                <input type=" text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="همه">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">پروژه مرجع</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="عنوان پروژه مرجع را وارد نمایید">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">مدیر پروژه</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="مدیر پروژه">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">نام کامل</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="نام کامل">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">تاریخ پروژه از</label>
+                                <input type="date" class="form-control fs-7" id="exampleFormControlInput1">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">تاریخ پروژه تا</label>
+                                <input type="date" class="form-control fs-7" id="exampleFormControlInput1">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">فیلتر برچسب پروژه</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="لطفا برچسب پروژه را انتخاب کنید">
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="exampleFormControlInput1" class="form-label fs-6">عنوان پروژه</label>
+                                <input type="text" class="form-control fs-7" id="exampleFormControlInput1"
+                                    placeholder="برای جستجو در عنوان پروژه چیزی بنویسید">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 bg-gray mt-4 p-3 border-bottom">
+                        <select class="form-select w-15 fs-7" aria-label="Default select example">
+                            <option selected>انتخاب وضعیت</option>
+                            <option value="1">کارهای انجام نشده</option>
+                            <option value="2">کارهای انجام شده</option>
+                            <option value="3">کارهای در حال انجام</option>
+                        </select>
+                        <div
+                            class="d-flex changeSitu align-items-center justify-content-between cursor pe-2 fs-7 w-15 border rounded-3">
+                            <span>تغییر وضعیت پروژه</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-pencil bg-blue text-white h-100 p-1 rounded-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                            </svg>
+                            <!-- modal -->
+                            <div class="bg-white messageModal position-fixed mx-auto p-2 border-top border-primary end-0 start-0 w-150 mt-5"
+                                style="z-index: 99;top: 44px;">
+                                <h6 class="text-center mb-0 mt-3">پیغام</h6>
+                                <span class="mt-5 fs-6">لطفا پروژه را انتخاب کنید</span>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex changeSitu align-items-center justify-content-between cursor pe-2 fs-7 w-15 border rounded-3">
+                            <span>آرشیو کردن</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-pencil bg-blue text-white h-100 p-1 rounded-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                            </svg>
+                            <!-- modal -->
+                            <div class="bg-white messageModal position-fixed mx-auto p-2 border-top border-primary end-0 start-0 w-150 mt-5"
+                                style="z-index: 99;top: 44px;">
+                                <h6 class="text-center mb-0 mt-3">پیغام</h6>
+                                <span class="mt-5 fs-6">لطفا پروژه را انتخاب کنید</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 bg-gray fs-7 table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">
+                                        <div>زیر پروژه</div>
+                                    </th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">
+                                        <div class="w-15">
+                                            <div class="d-flex align-items-center justify-content-center gap-3 cursor">
+                                                <span>کد</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                                </svg>
+                                            </div>
+                                            <input class="form-control mt-2">
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-center gap-3 cursor">
+                                                <span>عنوان پروژه</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                                </svg>
+                                            </div>
+                                            <input class="form-control mt-2">
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-center gap-3 cursor">
+                                                <span>وضعیت</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                                </svg>
+                                            </div>
+                                            <select class="form-select mt-2 fs-7" aria-label="Default select example">
+                                                <option selected>همه</option>
+                                                <option value="1">معوقه</option>
+                                                <option value="2">در حال اجرا</option>
+                                                <option value="2">تاخیر یافته</option>
+                                                <option value="2">پایان یافته</option>
+                                            </select>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-center gap-3 cursor">
+                                                <span>اولویت</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                                </svg>
+                                            </div>
+                                            <select class="form-select mt-2 fs-7" aria-label="Default select example">
+                                                <option selected>همه</option>
+                                                <option value="1">معوقه</option>
+                                                <option value="2">در حال اجرا</option>
+                                                <option value="2">تاخیر یافته</option>
+                                                <option value="2">پایان یافته</option>
+                                            </select>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="w-15">
+                                            <div class="d-flex align-items-center justify-content-center gap-3 cursor">
+                                                <span>مدیر پروژه</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                                </svg>
+                                            </div>
+                                            <input class="form-control mt-2">
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-center gap-3 cursor">
+                                                <span>نقش کاربر</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                                </svg>
+                                            </div>
+                                            <select class="form-select mt-2 fs-7" aria-label="Default select example">
+                                                <option selected>همه</option>
+                                                <option value="1">سازنده پروژه</option>
+                                                <option value="2">مدیر پروژه</option>
+                                                <option value="3">ناظر</option>
+                                                <option value="4">مهمان</option>
+                                                <option value="5">عضو</option>
+                                                <option value="6">مدیر بالادست</option>
+                                            </select>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="d-flex">
+                                        <div>
+                                            میزان پیشرفت پروژه
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td>
+                                        <div
+                                            class="d-flex position-relative justify-content-center py-1 text-white bg-primary cursor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                            <div class="position-absolute ProjectDropdown shadow rounded-3 end-0 bg-white w-15"
+                                                style="top: 26px;z-index: 33;">
+                                                <ul class="m-0 p-0 list-unstyled">
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>مشاهده پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>ویرایش</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-grid-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                                                            </svg>
+                                                            <span>زیر پروژه‌ها</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <span>+</span>
+                                                            <span>افزودن زیر پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <i class="bi bi-c-square"></i>
+                                                            <span>کپی پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-list-stars"
+                                                                viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z" />
+                                                                <path
+                                                                    d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53z" />
+                                                            </svg>
+                                                            <span>ثبت کار در پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor"
+                                                                class="bi bi-archive-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z" />
+                                                            </svg>
+                                                            <span>آرشیو کردن پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>ثبت در کاربرگ</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-eye-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                                <path
+                                                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                            </svg>
+                                                            <span>نمایش همه کارها</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-pin-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z" />
+                                                            </svg>
+                                                            <span>پین کردن پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-diagram-2-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-3 8A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5v-1z" />
+                                        </svg>
+                                    </td>
+                                    <td>1</td>
+                                    <td>start-01</td>
+                                    <td>
+                                        <a href="menus.html" class="text-info cursor">از اینجا شروع کنید</a>
+                                    </td>
+                                    <td>
+                                        <span class="bg-green cursor py-1 px-2">در حال اجرا</span>
+                                    </td>
+                                    <td>بالا</td>
+                                    <td>پشتیبان فنی</td>
+                                    <td>عضو</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td>
+                                        <div
+                                            class="d-flex position-relative justify-content-center py-1 text-white bg-primary cursor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                            <div class="position-absolute ProjectDropdown shadow rounded-3 end-0 bg-white w-15"
+                                                style="top: 26px;z-index: 33;">
+                                                <ul class="m-0 p-0 list-unstyled">
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>مشاهده پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>ویرایش</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-grid-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                                                            </svg>
+                                                            <span>زیر پروژه‌ها</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <span>+</span>
+                                                            <span>افزودن زیر پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <i class="bi bi-c-square"></i>
+                                                            <span>کپی پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-list-stars"
+                                                                viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z" />
+                                                                <path
+                                                                    d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53z" />
+                                                            </svg>
+                                                            <span>ثبت کار در پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor"
+                                                                class="bi bi-archive-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z" />
+                                                            </svg>
+                                                            <span>آرشیو کردن پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>ثبت در کاربرگ</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-eye-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                                <path
+                                                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                            </svg>
+                                                            <span>نمایش همه کارها</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-pin-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z" />
+                                                            </svg>
+                                                            <span>پین کردن پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-diagram-2-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-3 8A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5v-1z" />
+                                        </svg>
+                                    </td>
+                                    <td>1</td>
+                                    <td>start-01</td>
+                                    <td>
+                                        <a href="menus.html" class="text-info cursor">از اینجا شروع کنید</a>
+                                    </td>
+                                    <td>
+                                        <span class="bg-green cursor py-1 px-2">در حال اجرا</span>
+                                    </td>
+                                    <td>بالا</td>
+                                    <td>پشتیبان فنی</td>
+                                    <td>عضو</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td>
+                                        <div
+                                            class="d-flex position-relative justify-content-center py-1 text-white bg-primary cursor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                            <div class="position-absolute ProjectDropdown shadow rounded-3 end-0 bg-white w-15"
+                                                style="top: 26px;z-index: 33;">
+                                                <ul class="m-0 p-0 list-unstyled">
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>مشاهده پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>ویرایش</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-grid-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                                                            </svg>
+                                                            <span>زیر پروژه‌ها</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <span>+</span>
+                                                            <span>افزودن زیر پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <i class="bi bi-c-square"></i>
+                                                            <span>کپی پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-list-stars"
+                                                                viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd"
+                                                                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z" />
+                                                                <path
+                                                                    d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53z" />
+                                                            </svg>
+                                                            <span>ثبت کار در پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor"
+                                                                class="bi bi-archive-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z" />
+                                                            </svg>
+                                                            <span>آرشیو کردن پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor"
+                                                                class="bi bi-pencil h-100 p-1 rounded-3"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                            </svg>
+                                                            <span>ثبت در کاربرگ</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-eye-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                                <path
+                                                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                            </svg>
+                                                            <span>نمایش همه کارها</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-dark cursor py-1 px-2 border-bottom">
+                                                        <a class="d-flex align-items-center gap-1 text-dark">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                height="12" fill="currentColor" class="bi bi-pin-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z" />
+                                                            </svg>
+                                                            <span>پین کردن پروژه</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-diagram-2-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-3 8A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5v-1z" />
+                                        </svg>
+                                    </td>
+                                    <td>1</td>
+                                    <td>start-01</td>
+                                    <td>
+                                        <a href="menus.html" class="text-info cursor">از اینجا شروع کنید</a>
+                                    </td>
+                                    <td>
+                                        <span class="bg-green cursor py-1 px-2">در حال اجرا</span>
+                                    </td>
+                                    <td>بالا</td>
+                                    <td>پشتیبان فنی</td>
+                                    <td>عضو</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between alert-success border-end-0 p-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <a class="d-flex align-items-center gap-1 cursor btn btn-outline-success btn-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    <path fill-rule="evenodd"
+                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                                <span>اولین</span>
+                            </a>
+                            <a class="d-flex align-items-center gap-1 cursor btn btn-outline-success btn-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    <path fill-rule="evenodd"
+                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                                <span>قبلی</span>
+                            </a>
+                            <a class="d-flex align-items-center gap-1 cursor btn btn-outline-success btn-sm">
+                                <span>بعدی</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                </svg>
+                            </a>
+                            <a class="d-flex align-items-center gap-1 cursor btn btn-outline-success btn-sm">
+                                <span>آخرین</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div
+                                class="d-flex align-items-center justify-content-between cursor pe-2 fs-7 w-15 border border-success rounded-3">
+                                <span>وضعیت پروژه‌ها</span>
+                                <img src="./images/xlsx-removebg-preview.png" alt="xlsx">
+                            </div>
+                            <div
+                                class="d-flex align-items-center justify-content-between cursor pe-2 fs-7 w-15 border border-success rounded-3">
+                                <span>لیست پروژه‌ها</span>
+                                <img src="./images/xlsx-removebg-preview.png" alt="xlsx">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
