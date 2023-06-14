@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <title>تنظیمات حریم شخصی</title>
+</head>
+
+<body class="bg-gray">
+
+    <header class="px-lg-3 px-2 py-2">
+        <!-- overlay -->
+        <div id="overlay" class="position-fixed" style="background-color: rgba(0, 0, 0, 0.532);inset: 0;z-index: 99;">
+        </div>
+        <!-- news modal -->
+        <div id="newsModal" class="bg-white shadow-lg border-top border-primary position-fixed end-0 start-0 mx-auto"
+            style="width: 494px;z-index: 999;top: 66px;">
+            <svg id="closeNewsModal" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                class="bi bi-x position-absolute text-danger cursor m-2" viewBox="0 0 16 16">
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+            <h6 class="text-center mb-0 py-3">اعلانات</h6>
+            <div class="border m-3 text-center fs-6 py-5">
+                در لحظه کنونی اعلانی وجود ندارد
+            </div>
+            <button class="btn btn-secondary d-block m-3 fs-6 me-auto">نشان نده</button>
+            <div class="d-flex align-items-start justify-content-between border-top pt-3 m-3">
+                <div>
+                    <select class="form-select w-140">
+                        <option>5 دقیقه</option>
+                        <option>10 دقیقه</option>
+                        <option>15 دقیقه</option>
+                        <option>20 دقیقه</option>
+                        <option>25 دقیقه</option>
+                        <option>30 دقیقه</option>
+                        <option>35 دقیقه</option>
+                    </select>
+                    <button class="btn btn-secondary d-block mt-3 fs-6 me-auto">تکرار نمایش بعد از</button>
+                </div>
+                <button class="btn btn-secondary d-block fs-6 me-auto">هیچکدام را نشان نده</button>
+            </div>
+        </div>
+       <!--  -->
+       <div class="d-lg-none d-flex align-items-center gap-4 mb-3">
+        <a href="task.html" class="text-white text-decoration-none cursor">همتیک</a>
+        <a href="upgrade-plan.html"
+            class="d-flex align-items-center justify-content-center gap-1 cursor bg-success text-white fw-bold upgrade rounded-3 py-2 px-3 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor"
+                class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg>
+            <span>ارتقا طرح</span>
+        </a>
+        <a class="text-white cursor">
+            <div class="position-relative">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                        class="bi bi-people-fill userIcon" viewBox="0 0 16 16">
+                        <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                    </svg>
+                </div>
+                <div class="position-absolute peopleDropDown bg-white shadow-sm rounded-3 w-140 border"
+                    style="right: -221px;top: 44px;">
+                    <h6 class="text-primary mb-0 p-3">درخواست های دوستی</h6>
+                    <small class="text-secondary text-center d-block py-3 border-top fs-7">هیچ درخواست جدیدی
+                        وجود ندارد</small>
+                    <a href="allfriends.html" class="btn bg-gray text-dark fs-6 d-block mt-4">
+                        نمایش تمامی درخواست دوستی
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a class="text-white cursor">
+            <div class="position-relative">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                        class="bi bi-envelope-fill userIcon" viewBox="0 0 16 16">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                    </svg>
+                </div>
+                <div class="position-absolute peopleDropDown bg-white shadow-sm rounded-3 w-140 border"
+                    style="right: -221px;top: 44px;">
+                    <div class="d-flex align-items-center p-3 justify-content-between">
+                        <h6 class="text-primary mb-0">پیام ها</h6>
+                        <a class="cursor fs-7">ارسال یک پیام جدید</a>
+                    </div>
+                    <small class="text-secondary text-center d-block py-3 border-top fs-7">هیچ پیام جدیدی
+                        وجود ندارد</small>
+                    <a href="mail.html" class="btn bg-gray text-dark fs-6 d-block mt-4">
+                        نمایش تمامی پیام ها
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a class="text-white cursor">
+            <div class="position-relative">
+                <div>
+                    <a class="text-white cursor position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                            class="bi bi-bell-fill userIcon" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                        </svg>
+                        <span class="bg-danger position-absolute badg">7</span>
+                    </a>
+                </div>
+                <div class="position-absolute peopleDropDown bg-white shadow-sm rounded-3 w-140 border"
+                    style="right: -221px;top: 44px;">
+                    <div class="d-flex align-items-center p-3 justify-content-between">
+                        <h6 class="text-primary mb-0">رخداد ها</h6>
+                        <a class="cursor fs-7">تبدیل همه به دیده شده</a>
+                    </div>
+                    <small class="text-secondary text-center d-block py-3 border-top fs-7">هیچ رخداد جدیدی
+                        وجود ندارد</small>
+                    <a href="notification.html" class="btn bg-gray text-dark fs-6 d-block mt-4">
+                        نمایش تمامی رخداد ها
+                    </a>
+                </div>
+            </div>
+        </a>
+        <div class="text-white cursor bicardtext me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                class="bi bi-card-text" viewBox="0 0 16 16">
+                <path
+                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                <path
+                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </div>
+    </div>
+    <!--  -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center h-100">
+            <div class="d-flex align-items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                    class="bi bi-grid-3x3-gap-fill cursor rounded-2 p-1 lightBlue text-white" viewBox="0 0 16 16">
+                    <path
+                        d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                    class="bi bi-plus-lg cursor fw-bold rounded-2 p-1 lightBlue text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                </svg>
+                <div class="position-relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                        class="bi bi-search cursor rounded-2 searchIcon p-1 lightBlue text-white" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    <div class="position-absolute searchDropDown bg-blue2 p-2" style="top: 45px;">
+                        <input type="search">
+                        <svg style="left: 9px;top: 10px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="currentColor" class="bi bi-search cursor rounded-2 p-1 text-primary position-absolute"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <a href="task.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                        class="bi bi-house-door-fill cursor fw-bold rounded-2 p-1 lightBlue text-white"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                    </svg>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-clock text-white me-lg-4" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                </svg>
+                <div class="text-white time">
+                    <p class="mb-0">12:09</p>
+                    <p class="mb-0">1402/1/23</p>
+                </div>
+
+                <div class="d-flex align-items-center position-relative justify-content-between fw-bold cursor me-3">
+                    <div class="d-flex align-items-center headerDropDown gap-3 ms-sm-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-person-circle p-1 bg-white text-primary rounded-3 cursor" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                        <span class="text-white ms-lg-5">یعقوب خدری</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-down-fill text-white" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                    <ul class="position-absolute w-100 p-2 bg-white rounded-2 overflow-hidden list-unstyled m-0 p-0">
+                        <li class="border-bottom py-1"><a class="text-dark d-block" href="hamtick-wizard.html">ویزارد
+                                تنظیمات اولیه</a></li>
+                        <li class="border-bottom py-1"><a class="text-dark d-block" href="profile.html">پروفایل</a></li>
+                        <li class="py-1"><a class="text-dark d-block" href="account.html">اکانت</a></li>
+                        <li class="py-1"><a class="text-dark d-block" href="edit-account.html">ویرایش پروفایل</a></li>
+                        <li class="py-1"><a class="text-dark d-block" href="account.html">تنظیمات اکانت</a></li>
+                        <li class="py-1 active"><a class="text-dark d-block" href="personal-setting.html">تنظیمات حریم شخصی</a>
+                        </li>
+                        <li class="py-1"><a class="text-dark d-block">خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-lg-flex d-none align-items-center gap-2">
+                <a href="task.html" class="text-white text-decoration-none cursor">همتیک</a>
+                <a href="upgrade-plan.html"
+                    class="d-flex align-items-center justify-content-center gap-1 cursor bg-success text-white fw-bold upgrade rounded-3 py-2 px-3 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor"
+                        class="bi bi-chevron-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                    </svg>
+                    <span>ارتقا طرح</span>
+                </a>
+                <a class="text-white cursor">
+                    <div class="position-relative">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                                class="bi bi-people-fill userIcon" viewBox="0 0 16 16">
+                                <path
+                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                            </svg>
+                        </div>
+                        <div class="position-absolute peopleDropDown bg-white shadow-sm rounded-3 w-140 border"
+                            style="right: -221px;top: 44px;">
+                            <h6 class="text-primary mb-0 p-3">درخواست های دوستی</h6>
+                            <small class="text-secondary text-center d-block py-3 border-top fs-7">هیچ درخواست جدیدی
+                                وجود ندارد</small>
+                            <a href="allfriends.html" class="btn bg-gray text-dark fs-6 d-block mt-4">
+                                نمایش تمامی درخواست دوستی
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a class="text-white cursor">
+                    <div class="position-relative">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                                class="bi bi-envelope-fill userIcon" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg>
+                        </div>
+                        <div class="position-absolute peopleDropDown bg-white shadow-sm rounded-3 w-140 border"
+                            style="right: -221px;top: 44px;">
+                            <div class="d-flex align-items-center p-3 justify-content-between">
+                                <h6 class="text-primary mb-0">پیام ها</h6>
+                                <a class="cursor fs-7">ارسال یک پیام جدید</a>
+                            </div>
+                            <small class="text-secondary text-center d-block py-3 border-top fs-7">هیچ پیام جدیدی
+                                وجود ندارد</small>
+                            <a href="mail.html" class="btn bg-gray text-dark fs-6 d-block mt-4">
+                                نمایش تمامی پیام ها
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <a class="text-white cursor">
+                    <div class="position-relative">
+                        <div>
+                            <a class="text-white cursor position-relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                                    class="bi bi-bell-fill userIcon" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                                </svg>
+                                <span class="bg-danger position-absolute badg">7</span>
+                            </a>
+                        </div>
+                        <div class="position-absolute peopleDropDown bg-white shadow-sm rounded-3 w-140 border"
+                            style="right: -221px;top: 44px;">
+                            <div class="d-flex align-items-center p-3 justify-content-between">
+                                <h6 class="text-primary mb-0">رخداد ها</h6>
+                                <a class="cursor fs-7">تبدیل همه به دیده شده</a>
+                            </div>
+                            <small class="text-secondary text-center d-block py-3 border-top fs-7">هیچ رخداد جدیدی
+                                وجود ندارد</small>
+                            <a href="notification.html" class="btn bg-gray text-dark fs-6 d-block mt-4">
+                                نمایش تمامی رخداد ها
+                            </a>
+                        </div>
+                    </div>
+                </a>
+                <div class="text-white cursor bicardtext me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                        class="bi bi-card-text" viewBox="0 0 16 16">
+                        <path
+                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                        <path
+                            d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="bg-gray p-1">
+        <div class="bg-white text-primary m-2 p-3 mt-5 d-flex align-items-center justify-content-between">
+            <span>تنظیمات حریم شخصی</span>
+            <a class="bg-gray border text-secondary py-1 px-3 fs-6 cursor">تنظیمات اکانت</a>
+        </div>
+        <a class="cursor text-secondary px-4">مشاهده پروفایل شما</a>
+        <div class="d-flex flex-wrap align-items-center gap-3 p-3 border-bottom border-primary">
+            <button data-id="1" class="tabs btn btn-outline-primary btn-sm active">پروفایل</button>
+            <button data-id="2" class="tabs btn btn-outline-primary btn-sm">مطلب ها</button>
+            <button data-id="3" class="tabs btn btn-outline-primary btn-sm">رخدادها</button>
+            <button data-id="4" class="tabs btn btn-outline-primary btn-sm">کاربران مسدود شده</button>
+            <button data-id="5" class="tabs btn btn-outline-primary btn-sm">حالت مخفی</button>
+        </div>
+        <!--  -->
+        <form data-id="1" class="p-3 tabsContent first">
+            <small> تنظیمات پروفایل خود را جهت ارتباط با کاربران دیگر تنظیم کنید. </small>
+            <div class="d-flex align-items-center gap-5 mt-5 border-top py-3">
+                <span class="d-block w-20"> نمایش دیوار نظرات شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> اشتراک در دیوار شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نمایش دوستان شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> ارسال پیام برای شما. </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نمایش تصاویر پروفایل شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نمایش پروفایل شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نمایش اطلاعات اصلی شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نمایش اطلاعات پروفایل شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نمایش مکان شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> امتیاز پروفایل شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> مشاهده بازدید های اخیر از پروفایل شما </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> امکان تگ کردن شما ؟ </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>فقط دوستان</option>
+                    <option>هیچکس</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> تاریخ تولد: </span>
+                <select class="form-control w-15 fs-6">
+                    <option>نمایش ماه و روز</option>
+                    <option>نمایش سن</option>
+                    <option>تاریخ تولد من در پروفایل نمایش داده نشود</option>
+                    <option>تاریخ تولد من در پروفایل نمایش داده شود</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> show branch in profile header: </span>
+                <select class="form-control w-15 fs-6">
+                    <option>نه</option>
+                    <option>بله</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> show job unit in profile header: </span>
+                <select class="form-control w-15 fs-6">
+                    <option>نه</option>
+                    <option>بله</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> show job info in profile: </span>
+                <select class="form-control w-15 fs-6">
+                    <option>نه</option>
+                    <option>بله</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success mt-3 d-block me-auto">ذخیره تنظیمات</button>
+        </form>
+        <!--  -->
+        <form data-id="2" class="p-3 tabsContent">
+            <small> نکته: این تنظیمات برای مواردی که شما در اینده ارسال میکنید کاربرد دارد. و برای مطالب گذشته اعمال
+                نمیشود. </small>
+            <div class="d-flex align-items-center gap-5 mt-5 border-top py-3">
+                <span class="d-block w-20"> بانک تجربیات </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>دوستان</option>
+                    <option>دوستانم و دوستانشان</option>
+                    <option>فقط من</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 mt-5 border-top py-3">
+                <span class="d-block w-20"> تصاویر </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>دوستان</option>
+                    <option>دوستانم و دوستانشان</option>
+                    <option>فقط من</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center gap-5 mt-5 border-top py-3">
+                <span class="d-block w-20"> نظرسنجی‌ها </span>
+                <select class="form-control w-15 fs-6">
+                    <option>همه</option>
+                    <option>دوستان</option>
+                    <option>دوستانم و دوستانشان</option>
+                    <option>فقط من</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success mt-3 d-block me-auto">ذخیره تنظیمات</button>
+        </form>
+        <!--  -->
+        <form data-id="3" class="p-3 tabsContent">
+            <small> تنظیمات رخداد ها را سفارشی سازی کنید </small>
+            <div class="d-flex align-items-center gap-5 mt-5 border-top py-3">
+                <span class="d-block w-20"> نظرات جدید </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> نظرات برای تایید </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> میزهای همفکری مشترک شده </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> دوست جدید </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> درخواست دوستی </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> وقتی کاربری پست شما را لایک کرد </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> پیام های جدید </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> Meetings Notifications </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> دریافت خبرنامه </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 border-top py-3">
+                <span class="d-block w-20"> Task Notifications </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success mt-3 d-block me-auto">ذخیره تنظیمات</button>
+        </form>
+        <!--  -->
+        <div data-id="4" class="tabsContent">
+            <small class="px-5 pb-3 text-secondary border-bottom d-block mt-4">
+                شما تاکنون کاربری را مسدود نکرده اید.
+            </small>
+        </div>
+        <form data-id="5" class="p-3 tabsContent">
+            <small> حالت مخفی به شما اجازه میدهد سایت را مشاهده کنید بدون اینکه در لیست آنلاین ها باشید. </small>
+            <div class="d-flex align-items-center gap-5 mt-5 border-top py-3">
+                <span class="d-block w-20">  فعال کردن حالت مخفی  </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <label class="border py-2 px-4 fs-6 bg-green2">
+                        <input checked type="radio" name="yes">
+                        بله
+                    </label>
+                    <label class="border py-2 px-4 fs-6 bg-pink2">
+                        <input type="radio" name="yes">
+                        نه
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success mt-3 d-block me-auto">ذخیره تنظیمات</button>
+        </form>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
