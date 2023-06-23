@@ -14,6 +14,11 @@ header {
     z-index: 99;
 }
 
+.bi-plus-lg,
+.bi-grid-3x3-gap-fill {
+    display: none;
+}
+
 .lightBlue {
     background-color: #26659f;
 }
@@ -191,9 +196,12 @@ a {
 .outline-none {
     outline: none;
 }
-.peopleDropDown,.peopleDropDown.active{
+
+.peopleDropDown,
+.peopleDropDown.active {
     z-index: 9;
 }
+
 .searchDropDown,
 .peopleDropDown,
 .messageModal,
@@ -264,7 +272,10 @@ header ul.active,
 #overlay.active {
     display: block;
 }
-
+#newsModal > div:last-child {
+flex-wrap: wrap;
+gap: 10px;
+}
 header ul li:hover,
 header ul li.active {
     background-color: rgb(235, 234, 234);
@@ -298,10 +309,12 @@ header .badg {
     top: 0;
     z-index: 9;
 }
-.sidebar + div{
+
+.sidebar+div {
     height: 100vh;
     overflow-y: auto;
 }
+
 .sidebar ul li:hover,
 .sidebar ul li.active {
     background-color: #001a35;
@@ -551,6 +564,10 @@ button.tabs.active {
         top: 0;
     }
 
+    .bi-grid-3x3-gap-fill {
+        display: block;
+    }
+
     .sidebar {
         width: 240px;
         position: fixed;
@@ -619,8 +636,8 @@ button.tabs.active {
         width: 100%;
     }
 
-    .col-3 {
-        width: 100%;
+    .col-3,#newsModal {
+        width: 100%!important;
     }
 
     .gap-5 {
