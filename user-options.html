@@ -690,42 +690,13 @@
         <div class="col-10 p-0" style="padding-top: 0!important;">
             <div>
                 <div class="flex align-items-center py-3 border-bottom px-3">
-                    <a class="cursor text-dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill mb-1" viewBox="0 0 16 16">
-                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"></path>
-                        </svg>
-                    </a>
-                    <a class="cursor text-dark">لیست پروژه‌ها</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" fill="currentColor" class="bi bi-chevron-double-left fw-bold" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-                        <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-                    </svg>
-                    <a class="cursor text-dark">کارهای سررسید امروز</a>
+                    <a class="cursor text-dark">تنظیمات من</a>
                 </div>
-                <div class="px-5 py-3">
+                <div class="px-5 py-3 alert alert alert-info">
                     <div class="row">
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">عنوان کار</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">نام ایجاد کننده</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">تاریخ شروع:</label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">تاریخ تحویل:</label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">انتخاب برچسب</label>
-                            <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="جستجو و انتخاب...">
-                        </div>
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">وضعیت کار</label>
+                        <div class="mb-3 col-4">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                پنل فیلترهای یک پروژه : </label>
                             <select class="form-select" aria-label="Default select example">
                                 <option selected="">لطفا انتخاب کنید</option>
                                 <option value="1">کارهای انجام نشده</option>
@@ -733,23 +704,49 @@
                                 <option value="3">کارهای در حال انجام</option>
                             </select>
                         </div>
-                        <div class="mb-3 col-3">
-                            <label for="exampleFormControlInput1" class="form-label">عنوان پروژه</label>
+                        <div class="mb-3 col-4">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                فیلتر پیش فرض کارها : </label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected="">انتخاب کنید</option>
-                                <option value="1">معرفی منوهای واتا دیجیتال</option>
-                                <option value="2">از اینجا شروع کنید</option>
+                                <option selected="">لطفا انتخاب کنید</option>
+                                <option value="1">کارهای انجام نشده</option>
+                                <option value="2">کارهای انجام شده</option>
+                                <option value="3">کارهای در حال انجام</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="exampleFormControlInput1" class="form-label">نمایش پروژه در : </label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected="">لطفا انتخاب کنید</option>
+                                <option value="1">کارهای انجام نشده</option>
+                                <option value="2">کارهای انجام شده</option>
+                                <option value="3">کارهای در حال انجام</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="exampleFormControlInput1" class="form-label">نمایش کار در : </label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected="">لطفا انتخاب کنید</option>
+                                <option value="1">کارهای انجام نشده</option>
+                                <option value="2">کارهای انجام شده</option>
+                                <option value="3">کارهای در حال انجام</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-4">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                صفحه فرود : </label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected="">لطفا انتخاب کنید</option>
+                                <option value="1">کارهای انجام نشده</option>
+                                <option value="2">کارهای انجام شده</option>
+                                <option value="3">کارهای در حال انجام</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-between px-3 fw-bold border-bottom border-dark pb-2">
-                    <span class="text-primary">ابتدا موارد مربوط به فیلتر را انتخاب نمایید و سپس روی دکمه فیلتر کلیک
-                        کنید</span>
+                <div class="d-flex align-items-center justify-content-end px-3 fw-bold border-bottom border-dark pb-2">
                     <div class="d-flex align-items-center gap-3 flex-wrap">
-                        <a class="text-decoration-underline text-primary cursor">حذف فیلتر</a>
-                        <button class="btn text-white px-5 bg-green">فیلتر</button>
-                        <button class="btn btn-primary px-3">mytasks گزارش روزانه </button>
+                        <button class="btn text-white px-5 bg-info">ثبت</button>
                     </div>
                 </div>
             </div>

@@ -636,7 +636,7 @@ button.tabs.active {
         width: 100%;
     }
 
-    .col-3,#newsModal {
+    .col-3,#newsModal,.col-4 {
         width: 100%!important;
     }
 
