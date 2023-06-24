@@ -20,7 +20,7 @@ header {
 }
 
 .lightBlue {
-    background-color: #26659f;
+    background-color: #02928c;
 }
 
 a {
@@ -125,9 +125,11 @@ a {
 }
 
 .bg-green {
-    background-color: #4bb51b;
+    background-color: #016060;
 }
-
+.bg-green:hover{
+    background-color: #012b2b;
+}
 .bg-green2 {
     background-color: #e3f6e5;
 }
@@ -137,7 +139,7 @@ a {
 }
 
 .bg-blue2 {
-    background: linear-gradient(145deg, #001956 0%, #004a8e 90%) !important;
+    background: linear-gradient(145deg, #02928c 0%, #004a8e 90%) !important;
 }
 
 .bg-overlay {
@@ -168,7 +170,12 @@ a {
 .bg-purple2:hover svg {
     color: white !important;
 }
-
+.btn-primary {
+    background-color: #14b1aa!important;
+  }
+.text-primary {
+    color: #086161!important;
+  }
 .text-purple {
     background-color: #853681;
 }
@@ -249,7 +256,7 @@ header {
     background-color: #303d49;
     border-bottom: 1px solid #222b33;
     width: 100% !important;
-    background: linear-gradient(145deg, #000214 0%, #001956 40%, #004a8e 70%) !important;
+    background: linear-gradient(145deg, #012927 0%, #005855 40%, #02928c 70%) !important;
     position: fixed;
 }
 
@@ -298,7 +305,7 @@ header .badg {
 }
 
 .sidebar {
-    background: linear-gradient(180deg, rgba(1, 63, 129, 1) 0%, rgba(0, 1, 2, 1) 100%);
+    background: linear-gradient(145deg, #012927 0%, #055653 40%, #051e1d 70%) !important;
     background-repeat: repeat;
     background-size: auto;
     overflow-y: auto;
@@ -317,7 +324,7 @@ header .badg {
 
 .sidebar ul li:hover,
 .sidebar ul li.active {
-    background-color: #001a35;
+    background-color: #022b2b;
 }
 
 .sidebar img {
@@ -341,7 +348,7 @@ header .badg {
 .sidebar .submenu {
     max-height: 0;
     overflow: hidden;
-    background-color: #001a35;
+    background-color: #001515;
     transition: all .4s;
 }
 
@@ -381,7 +388,7 @@ header .badg {
 
 .sidebar .submenu li:hover,
 .sidebar .submenu li.active {
-    background-color: #004a8e;
+    background-color: #022b2b;
 }
 
 .alert-info {
